@@ -1,14 +1,16 @@
 import React from 'react';
 import Github from "./github.jsx";
 import LinkedIn from "./linkedin.jsx";
+import Gmail from "./gmail.jsx";
+import Twitter from "./twitter.jsx";
 
 const Contact = () => {
     return (
         <div className="contactContainer">
         <LinkedIn />
-        <a className="link2" href="mailto:anthonyjquattrocchi@gmail.com">Email</a>
+        <Gmail />
         <Github />
-        <a className="link4" href="https://twitter.com/AJQuattrocchi" target="_blank">Twitter</a>
+        <Twitter />
         </div>
     )
 }
