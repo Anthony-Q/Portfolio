@@ -290,3 +290,23 @@ html, body {
   }
 }
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  margin-top: 1em;
+  .par {
+  display: flex;
+  background: white;
+  position: relative;
+  max-width: 60%;
+  margin-top: 1em;
+  font-size: 0.3em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  z-index: 5;
+  }
+}

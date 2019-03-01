@@ -8,10 +8,10 @@ const About = (props) => {
 
             <div className="par">I love using cutting-edge technologies, frameworks 
             and libraries to design and create stunning web applications in Javascript.
-            I specifically love React, CSS, Node, MongoDB and everything else in between. 
+             
             </div>
 
-            <div className="par">This portfolio was made with React, Styled-Components and 
+            <div className="par">This portfolio was made with React, SCSS, NodeJS and 
             a lot of love. </div>
             
         </div>
