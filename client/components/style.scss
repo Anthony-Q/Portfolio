@@ -48,7 +48,7 @@ html, body {
 @function random-color() {
     $value: "black";
     @if random(5) == 1 {
-     $value: "#ffff8d";
+     $value: "#91e89e";
     }
     @else if random(5) == 2{
       $value: "#d81b60";
@@ -57,10 +57,10 @@ html, body {
       $value: "#FF5733";
     }
     @else if random(5) == 4{
-      $value: "#4dd0e1";
+      $value: "#4d76e1";
     }
     @else {
-      $value: "#85C1E9";
+      $value: "#e985e0";
     }
     @return unquote($value);
   }
@@ -89,7 +89,7 @@ html, body {
 
 .hbutton {
     display: flex;
-    margin: 1rem;
+    margin: 0.5rem;
     z-index: 10;
     border-bottom: 3px solid black;
     user-select: none;
@@ -119,7 +119,7 @@ html, body {
       border-radius: 50%;
       background: transparent;
       box-shadow: $shadows-medium;
-      animation: reverseCycle 5s linear infinite;
+      animation: reverseCycle 11s linear infinite;
     }
     
     .stars3 {
@@ -128,7 +128,7 @@ html, body {
       border-radius: 50%;
       background: transparent;
       box-shadow: $shadows-big;
-      animation: cycle 7s linear infinite;
+      animation: cycle 10s linear infinite;
     }
       .stars4 {
       width: 6px;
@@ -144,17 +144,17 @@ html, body {
       border-radius: 50%;
       background: transparent;
       box-shadow: $shadows-small;
-      animation: reverseCycle 9s linear infinite;
+      animation: reverseCycle 15s linear infinite;
     }
     
   @keyframes cycle {
       from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-      to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+      to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
   }
     
     @keyframes reverseCycle {
       from { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
-      to { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to { transform: rotate(0deg) translateX(200px) rotate(0deg); }
     }
   
   
@@ -162,6 +162,75 @@ html, body {
       from { opacity: 0; }
       to   { opacity: 1; }
   }
+
+
+  .projectContainer {
+    display: flex;
+    flex-Direction: column;
+    position: relative;
+    max-width: 95vw;
+    justify-content: center;
+    z-index: 5;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+.project2 {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 1em;
+    .project-text-container {
+      font-size: 0.5em;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+      z-index: 5;
+      border-radius: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 0;
+      
+    .projectTitle {
+    font-size: 1em;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    z-index: 5
+    }
+      .blurb {
+    display: flex;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-size: 0.5em;
+    background: white;
+    text-align: left;
+}
+    }
+.github {
+    font-size: 0.8em;
+    text-decoration: inherit;
+    color: inherit;
+    margin: auto;
+    &:hover {
+        background: #4dd0e1;
+    }
+}
+.project-image {
+  font-size: 0.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  z-index: 5;
+  max-width: 12em;
+  max-height: 6em;
+}
+  }
+}
+
   
   
 .contactContainer {
@@ -216,4 +285,20 @@ html, body {
     &:hover {
         background: #d81b60;
     }
+}
+
+.gmail-comp {
+    margin: 0.5em;
+}
+
+.github-comp {
+  margin: 0.5em;
+}
+
+.twitter-comp {
+  margin: 0.5em;
+}
+
+.linkedin-comp {
+  margin: 0.5em;
 }

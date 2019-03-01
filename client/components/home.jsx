@@ -32,7 +32,7 @@ class Home extends React.Component {
         <div className="nameContainer">
         <div className="firstName">Anthony</div>
         <div className="lastName">Quattrocchi</div>
-        <div className="bio">software engineer | web-developer | fun dude</div>
+        <div className="bio">software engineer | web-developer</div>
       </div>
       )
     }
