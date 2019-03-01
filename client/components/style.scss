@@ -1,6 +1,219 @@
 
+
+html, body {
+    height: 100%
+}
+
 * {
     font-size: calc(1em + 1vw);
+    
+}
+
+.main {
+    width: auto;
+    height: auto;
+
 }
 
 
+.nameContainer {
+    width: 99vw;
+    display: flex;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: none;
+    .firstName {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+        z-index: 1;
+        font-size: 1em;
+        margin-bottom: -0.2em;
+    }
+    .lastName {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+        z-index: 1;
+        font-size: 1em;
+    }
+    .bio {
+       z-index: 1;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+        z-index: 5;
+        font-size: 0.3em;
+        letter-spacing: 0.2em;
+    }
+}
+
+
+@function random-color() {
+    $value: "black";
+    @if random(5) == 1 {
+     $value: "#ffff8d";
+    }
+    @else if random(5) == 2{
+      $value: "#d81b60";
+    }
+    @else if random(5) == 3{
+      $value: "#FF5733";
+    }
+    @else if random(5) == 4{
+      $value: "#4dd0e1";
+    }
+    @else {
+      $value: "#85C1E9";
+    }
+    @return unquote($value);
+  }
+  
+  
+  @function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px #{random-color()}";
+  
+    @for $i from 2 through $n {
+      $value: "#{$value} , #{random(2000)}px #{random(2000)}px #{random-color()}";
+    }
+  
+    @return unquote($value);
+  }
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    font-size: 0.7rem;
+    position: fixed;
+    z-index: 10;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+.hbutton {
+    display: flex;
+    margin: 1rem;
+    z-index: 10;
+    border-bottom: 3px solid black;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+  $shadows-small: multiple-box-shadow(500);
+  $shadows-medium: multiple-box-shadow(500);
+  $shadows-big: multiple-box-shadow(500);
+
+    
+    .stars1 {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: $shadows-small;
+      animation: cycle 12s linear infinite;
+    }
+    
+    .stars2 {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: $shadows-medium;
+      animation: reverseCycle 5s linear infinite;
+    }
+    
+    .stars3 {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: $shadows-big;
+      animation: cycle 7s linear infinite;
+    }
+      .stars4 {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: $shadows-small;
+      animation: cycle 20s linear infinite;
+    }
+       .stars4 {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: $shadows-small;
+      animation: reverseCycle 9s linear infinite;
+    }
+    
+  @keyframes cycle {
+      from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+    
+    @keyframes reverseCycle {
+      from { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+      to { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    }
+  
+  
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+  
+  
+.contactContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    height: 90vh;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    z-index: 5;
+}
+.link1 {
+    position: relative;
+    display: flex;
+    margin: 0.3em;
+    color: inherit;
+    text-decoration: inherit;
+    &:hover {
+        background: #4dd0e1;
+    }
+}
+
+.link2 {
+    position: relative;
+    display: flex;
+    margin: 0.3em;
+    color: inherit;
+    text-decoration: inherit;
+    &:hover {
+        background-color: #00ab59;
+    }
+}
+
+.link3 {
+    position: relative;
+    display: flex;
+    margin: 0.3em;
+    color: inherit;
+    text-decoration: inherit;
+    &:hover {
+        background: #6571f7;
+    }
+}
+
+.link4 {
+    position: relative;
+    display: flex;
+    margin: 0.3em;
+    color: inherit;
+    text-decoration: inherit;
+    &:hover {
+        background: #d81b60;
+    }
+}
