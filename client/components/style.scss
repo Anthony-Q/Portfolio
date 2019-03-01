@@ -194,7 +194,7 @@ html, body {
       border-radius: 20px;
       margin-top: auto;
       margin-bottom: auto;
-      margin-right: 0;
+      margin-right: 0.4em;
       
     .projectTitle {
     font-size: 1em;
@@ -211,9 +211,9 @@ html, body {
     }
 .github {
     font-size: 0.8em;
+    
     text-decoration: inherit;
     color: inherit;
-    margin: auto;
     &:hover {
         background: #4dd0e1;
     }
@@ -223,16 +223,21 @@ html, body {
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   z-index: 5;
-  max-width: 12em;
-  max-height: 6em;
+  max-height: 8em;
+}
+.project-image-fec {
+  font-size: 0.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+  z-index: 5;
+  max-height: 10em;
+
 }
   }
 }
 
-  
-  
 .contactContainer {
     display: flex;
     position: relative;
@@ -243,62 +248,45 @@ html, body {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     z-index: 5;
 }
-.link1 {
-    position: relative;
-    display: flex;
-    margin: 0.3em;
-    color: inherit;
-    text-decoration: inherit;
-    &:hover {
-        background: #4dd0e1;
-    }
-}
 
-.link2 {
-    position: relative;
-    display: flex;
-    margin: 0.3em;
-    color: inherit;
-    text-decoration: inherit;
-    &:hover {
-        background-color: #00ab59;
-    }
-}
-
-.link3 {
-    position: relative;
-    display: flex;
-    margin: 0.3em;
-    color: inherit;
-    text-decoration: inherit;
-    &:hover {
-        background: #6571f7;
-    }
-}
-
-.link4 {
-    position: relative;
-    display: flex;
-    margin: 0.3em;
-    color: inherit;
-    text-decoration: inherit;
-    &:hover {
-        background: #d81b60;
-    }
-}
-
-.gmail-comp {
-    margin: 0.5em;
-}
-
-.github-comp {
+.gmailcon {
   margin: 0.5em;
+  .gmail {
+    &:hover {
+      fill: #d81b60;
+    }
+  }
 }
 
-.twitter-comp {
+
+.githubLinkcon {
+  z-index: 5;
   margin: 0.5em;
+  .githubLink {
+  margin: 0.5em;
+  &:hover {
+    fill: #91e89e;
+  }
+}
 }
 
-.linkedin-comp {
+.twittercon {
+  z-index: 5;
   margin: 0.5em;
+  .twitter{
+  margin: 0.5em;
+  &:hover {
+    fill: #FF5733;
+  }
+}
+}
+
+.linkedincon {
+  z-index: 5;
+  margin: 0.5em;
+  .linkedin {
+  &:hover {
+    fill: #4d76e1;
+  }
+}
 }
