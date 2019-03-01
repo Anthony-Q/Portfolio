@@ -22,6 +22,10 @@ module.exports = {
           presets: ['react', 'env'],
           }
         },
+          {
+            test: /\.(jpg|jpeg|png|gif|mp3|svg|ttf)$/,
+            loaders: ["file-loader"]
+          },
         {
         test: /\.scss$/, 
         use: [
