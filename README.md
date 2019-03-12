@@ -1,7 +1,7 @@
 # Portfolio
 My portfolio/personal [website](http://www.aquattrocchi.com). 
 
-# Technology Used
+## Technology Used
 ```
 NodeJS
 Express
